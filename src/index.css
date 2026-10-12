@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* Custom luxury scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF1F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DEC371;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C59F2A;
+}
+
+/* Luxury Shimmer Effect */
+.shimmer-gold {
+  background: linear-gradient(
+    90deg,
+    rgba(212, 175, 55, 0) 0%,
+    rgba(255, 235, 170, 0.45) 50%,
+    rgba(212, 175, 55, 0) 100%
+  );
+  background-size: 200% 100%;
+}
+
+/* Gold Gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #A9841B 0%, #D4AF37 50%, #C59F2A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle luxury card border */
+.border-luxury-gold {
+  border-color: rgba(212, 175, 55, 0.28);
+}
+
+.border-luxury-gold-hover:hover {
+  border-color: rgba(212, 175, 55, 0.7);
+}
+
+/* Soft frosted glass effect */
+.glass-luxury {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-blush {
+  background: rgba(250, 241, 242, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Ensure mobile cards maintain clean height and padding */
+.product-card-mobile {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
