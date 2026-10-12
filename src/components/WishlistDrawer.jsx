@@ -2,6 +2,7 @@ import React from 'react';
 import { X, Heart, ShoppingBag, Trash2, ArrowRight } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 import { PRODUCTS } from '../data/products';
+import { SafeImage } from './SafeImage';
 
 export const WishlistDrawer = () => {
   const {
@@ -68,7 +69,7 @@ export const WishlistDrawer = () => {
                       onClick={() => handleProductClick(product)}
                       className="w-20 h-20 rounded-xl overflow-hidden bg-blush-50 border border-gold-200 flex-shrink-0 cursor-pointer"
                     >
-                      <img 
+                      <SafeImage 
                         src={product.images[0]} 
                         alt={product.name}
                         className="w-full h-full object-cover" 

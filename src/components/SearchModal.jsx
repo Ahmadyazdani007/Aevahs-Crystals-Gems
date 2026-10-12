@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, Sparkles, ArrowRight } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 import { PRODUCTS } from '../data/products';
+import { SafeImage } from './SafeImage';
 
 export const SearchModal = () => {
   const { 
@@ -104,7 +105,7 @@ export const SearchModal = () => {
                     onClick={() => handleSelectProduct(prod)}
                     className="flex items-center space-x-3.5 p-2.5 rounded-xl hover:bg-blush-50 cursor-pointer border border-transparent hover:border-gold-200 transition-all"
                   >
-                    <img 
+                    <SafeImage 
                       src={prod.images[0]} 
                       alt={prod.name} 
                       className="w-14 h-14 object-cover rounded-lg border border-gold-200 flex-shrink-0"

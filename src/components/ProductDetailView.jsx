@@ -19,6 +19,7 @@ import { useShop } from '../context/ShopContext';
 import { PRODUCTS } from '../data/products';
 import { ProductCard } from './ProductCard';
 import { RingSizeGuideModal } from './RingSizeGuideModal';
+import { SafeImage } from './SafeImage';
 
 export const ProductDetailView = ({ product, isModal = false, onClose = null }) => {
   const { 
@@ -139,7 +140,7 @@ export const ProductDetailView = ({ product, isModal = false, onClose = null }) 
             
             {/* Primary Main Image Frame */}
             <div className="relative aspect-square w-full rounded-2xl overflow-hidden bg-blush-50 border border-gold-200/80 shadow-sm">
-              <img
+              <SafeImage
                 src={product.images[activeImageIndex] || product.images[0]}
                 alt={product.name}
                 className="w-full h-full object-cover transition-all duration-300"
@@ -178,7 +179,7 @@ export const ProductDetailView = ({ product, isModal = false, onClose = null }) 
                         : 'border-blush-200 opacity-70 hover:opacity-100'
                     }`}
                   >
-                    <img src={img} alt={`View angle ${idx + 1}`} className="w-full h-full object-cover" />
+                    <SafeImage src={img} alt={`View angle ${idx + 1}`} className="w-full h-full object-cover" />
                   </button>
                 ))}
               </div>

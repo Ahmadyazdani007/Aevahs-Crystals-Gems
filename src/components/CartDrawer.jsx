@@ -12,6 +12,7 @@ import {
   Tag
 } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
+import { SafeImage } from './SafeImage';
 
 export const CartDrawer = () => {
   const {
@@ -128,7 +129,7 @@ export const CartDrawer = () => {
                   >
                     {/* Item Image */}
                     <div className="w-20 h-20 rounded-xl overflow-hidden bg-blush-50 border border-gold-200 flex-shrink-0">
-                      <img 
+                      <SafeImage 
                         src={item.product.images[0]} 
                         alt={item.product.name}
                         className="w-full h-full object-cover" 

@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowUpRight, Sparkles } from 'lucide-react';
 import { CATEGORIES } from '../data/categories';
 import { useShop } from '../context/ShopContext';
+import { SafeImage } from './SafeImage';
 
 export const CategorySection = () => {
   const { setActiveCategory, closeProductDetail } = useShop();
@@ -34,9 +35,8 @@ export const CategorySection = () => {
           </p>
         </div>
 
-        {/* Categories Grid: 8 items */}
-        {/* On mobile: 2 columns, tablet: 4 columns, desktop: 4 columns in 2 balanced rows */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5 lg:gap-6">
+        {/* Categories Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-5 lg:gap-6">
           {CATEGORIES.map((category) => (
             <button
               key={category.id}
@@ -45,7 +45,7 @@ export const CategorySection = () => {
             >
               {/* Category Image Box */}
               <div className="relative aspect-square w-full overflow-hidden bg-blush-100">
-                <img
+                <SafeImage
                   src={category.image}
                   alt={category.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"

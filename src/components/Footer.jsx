@@ -139,23 +139,28 @@ export const Footer = () => {
             </h4>
             <ul className="space-y-2 text-xs text-blush-200/90 font-light">
               <li>
-                <button onClick={() => handleCategoryClick('natural-crystals')} className="hover:text-gold-300 transition-colors">
-                  Natural Crystals
-                </button>
-              </li>
-              <li>
                 <button onClick={() => handleCategoryClick('rings')} className="hover:text-gold-300 transition-colors">
                   Gemstone Rings
                 </button>
               </li>
               <li>
-                <button onClick={() => handleCategoryClick('jewellery')} className="hover:text-gold-300 transition-colors">
-                  Crystal Jewellery
+                <button onClick={() => handleCategoryClick('bracelets')} className="hover:text-gold-300 transition-colors">
+                  Crystal Bracelets
                 </button>
               </li>
               <li>
                 <button onClick={() => handleCategoryClick('earrings')} className="hover:text-gold-300 transition-colors">
-                  Earrings
+                  Earrings & Drops
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleCategoryClick('tops')} className="hover:text-gold-300 transition-colors">
+                  Gemstone Tops & Studs
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleCategoryClick('natural-crystals')} className="hover:text-gold-300 transition-colors">
+                  Natural Crystals
                 </button>
               </li>
               <li>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Heart, ShoppingBag, Eye, Star } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
+import { SafeImage } from './SafeImage';
 
 export const ProductCard = ({ product }) => {
   const { 
@@ -53,8 +54,8 @@ export const ProductCard = ({ product }) => {
       {/* Product Image Container */}
       <div className="relative aspect-square w-full bg-blush-50/70 overflow-hidden">
         
-        {/* Main Product Image with subtle zoom */}
-        <img
+        {/* Main Product Image with SafeImage fallback */}
+        <SafeImage
           src={product.images[imageIndex] || product.images[0]}
           alt={product.name}
           className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"

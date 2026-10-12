@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
 import { CATEGORIES } from '../data/categories';
+import { SafeImage } from './SafeImage';
 
 export const Navbar = () => {
   const { 
@@ -151,12 +152,36 @@ export const Navbar = () => {
           </div>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center justify-center space-x-8 py-3 border-t border-blush-100 text-xs tracking-wider uppercase font-medium">
+          <nav className="hidden lg:flex items-center justify-center space-x-6 xl:space-x-8 py-3 border-t border-blush-100 text-xs tracking-wider uppercase font-medium">
             <button
               onClick={() => handleCategoryClick('all')}
               className="text-luxury-charcoal hover:text-gold-600 transition-colors pb-0.5 hover:border-b hover:border-gold-400"
             >
               All Curations
+            </button>
+            <button
+              onClick={() => handleCategoryClick('rings')}
+              className="text-luxury-charcoal hover:text-gold-600 transition-colors pb-0.5 hover:border-b hover:border-gold-400"
+            >
+              Rings
+            </button>
+            <button
+              onClick={() => handleCategoryClick('bracelets')}
+              className="text-luxury-charcoal hover:text-gold-600 transition-colors pb-0.5 hover:border-b hover:border-gold-400 font-semibold text-gold-700"
+            >
+              Bracelets
+            </button>
+            <button
+              onClick={() => handleCategoryClick('earrings')}
+              className="text-luxury-charcoal hover:text-gold-600 transition-colors pb-0.5 hover:border-b hover:border-gold-400 font-semibold text-gold-700"
+            >
+              Earrings
+            </button>
+            <button
+              onClick={() => handleCategoryClick('tops')}
+              className="text-luxury-charcoal hover:text-gold-600 transition-colors pb-0.5 hover:border-b hover:border-gold-400 font-semibold text-gold-700"
+            >
+              Tops & Studs
             </button>
             <button
               onClick={() => handleCategoryClick('natural-crystals')}
@@ -165,34 +190,10 @@ export const Navbar = () => {
               Natural Crystals
             </button>
             <button
-              onClick={() => handleCategoryClick('rings')}
-              className="text-luxury-charcoal hover:text-gold-600 transition-colors pb-0.5 hover:border-b hover:border-gold-400"
-            >
-              Gemstone Rings
-            </button>
-            <button
-              onClick={() => handleCategoryClick('jewellery')}
-              className="text-luxury-charcoal hover:text-gold-600 transition-colors pb-0.5 hover:border-b hover:border-gold-400"
-            >
-              Crystal Jewellery
-            </button>
-            <button
-              onClick={() => handleCategoryClick('earrings')}
-              className="text-luxury-charcoal hover:text-gold-600 transition-colors pb-0.5 hover:border-b hover:border-gold-400"
-            >
-              Earrings
-            </button>
-            <button
               onClick={() => handleCategoryClick('pendants')}
               className="text-luxury-charcoal hover:text-gold-600 transition-colors pb-0.5 hover:border-b hover:border-gold-400"
             >
-              Gemstone Pendants
-            </button>
-            <button
-              onClick={() => handleCategoryClick('accessories')}
-              className="text-luxury-charcoal hover:text-gold-600 transition-colors pb-0.5 hover:border-b hover:border-gold-400"
-            >
-              Crystal Accessories
+              Pendants
             </button>
             <a
               href="#about-brand"
@@ -251,7 +252,7 @@ export const Navbar = () => {
                   className="w-full flex items-center justify-between px-3 py-2.5 text-sm text-luxury-dark hover:bg-blush-50 rounded-lg text-left transition-colors"
                 >
                   <div className="flex items-center space-x-2.5">
-                    <img 
+                    <SafeImage 
                       src={cat.image} 
                       alt={cat.name} 
                       className="w-6 h-6 rounded-full object-cover border border-gold-200"

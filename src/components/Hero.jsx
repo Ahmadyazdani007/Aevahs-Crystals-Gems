@@ -1,6 +1,7 @@
 import React from 'react';
 import { Sparkles, ArrowRight, ShieldCheck, Gem, Package, HeartHandshake } from 'lucide-react';
 import { useShop } from '../context/ShopContext';
+import { SafeImage } from './SafeImage';
 
 export const Hero = () => {
   const { setActiveCategory, closeProductDetail } = useShop();
@@ -95,7 +96,7 @@ export const Hero = () => {
               
               {/* Main Feature Image (Opal & Gold Ring) */}
               <div className="relative rounded-2xl overflow-hidden shadow-luxury border-2 border-white/80 group">
-                <img
+                <SafeImage
                   src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=85"
                   alt="Sparkling Ethiopian Opal in 18k Champagne Gold"
                   className="w-full h-[360px] sm:h-[460px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
@@ -115,7 +116,7 @@ export const Hero = () => {
 
               {/* Secondary Floating Accent Card (Raw Rose Quartz) */}
               <div className="hidden sm:block absolute -top-4 -left-6 w-36 sm:w-44 rounded-xl overflow-hidden shadow-luxury border-2 border-white bg-white p-1.5 animate-slide-up">
-                <img
+                <SafeImage
                   src="https://images.unsplash.com/photo-1599707367072-cd6ada2bc375?auto=format&fit=crop&w=400&q=80"
                   alt="Natural Madagascar Rose Quartz"
                   className="w-full h-24 sm:h-28 object-cover rounded-lg"
@@ -127,7 +128,7 @@ export const Hero = () => {
 
               {/* Third Floating Accent Card (Moonstone Earrings) */}
               <div className="hidden sm:block absolute -bottom-4 -right-4 w-36 sm:w-44 rounded-xl overflow-hidden shadow-luxury border-2 border-white bg-white p-1.5 animate-slide-up">
-                <img
+                <SafeImage
                   src="https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=400&q=80"
                   alt="Starlight Moonstone Huggies"
                   className="w-full h-24 sm:h-28 object-cover rounded-lg"

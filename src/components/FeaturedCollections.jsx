@@ -6,19 +6,23 @@ import { useShop } from '../context/ShopContext';
 
 export const FeaturedCollections = () => {
   const { setActiveCategory } = useShop();
-  const [activeTab, setActiveTab] = useState('new-arrivals');
+  const [activeTab, setActiveTab] = useState('bestsellers');
 
   // Filter collections
-  const newArrivals = PRODUCTS.filter(p => p.isNew);
   const bestsellers = PRODUCTS.filter(p => p.isBestseller);
-  const elegantRings = PRODUCTS.filter(p => p.category === 'rings');
-  const uniqueJewellery = PRODUCTS.filter(p => p.category === 'jewellery' || p.category === 'pendants' || p.category === 'earrings');
+  const rings = PRODUCTS.filter(p => p.category === 'rings');
+  const bracelets = PRODUCTS.filter(p => p.category === 'bracelets');
+  const earrings = PRODUCTS.filter(p => p.category === 'earrings');
+  const tops = PRODUCTS.filter(p => p.category === 'tops');
+  const crystals = PRODUCTS.filter(p => p.category === 'natural-crystals');
 
   const tabs = [
-    { id: 'new-arrivals', label: 'New Arrivals', items: newArrivals.slice(0, 4), categorySlug: 'new-arrivals' },
-    { id: 'bestselling-crystals', label: 'Bestselling Crystals', items: bestsellers.slice(0, 4), categorySlug: 'bestsellers' },
-    { id: 'elegant-rings', label: 'Elegant Rings', items: elegantRings.slice(0, 4), categorySlug: 'rings' },
-    { id: 'unique-jewellery', label: 'Unique Gemstone Jewellery', items: uniqueJewellery.slice(0, 4), categorySlug: 'jewellery' },
+    { id: 'bestsellers', label: 'Bestselling Gems', items: bestsellers.slice(0, 4), categorySlug: 'bestsellers' },
+    { id: 'rings', label: 'Gemstone Rings', items: rings.slice(0, 4), categorySlug: 'rings' },
+    { id: 'bracelets', label: 'Crystal Bracelets', items: bracelets.slice(0, 4), categorySlug: 'bracelets' },
+    { id: 'earrings', label: 'Earrings & Drops', items: earrings.slice(0, 4), categorySlug: 'earrings' },
+    { id: 'tops', label: 'Gemstone Tops', items: tops.slice(0, 4), categorySlug: 'tops' },
+    { id: 'crystals', label: 'Natural Crystals', items: crystals.slice(0, 4), categorySlug: 'natural-crystals' },
   ];
 
   const currentCollection = tabs.find(t => t.id === activeTab) || tabs[0];

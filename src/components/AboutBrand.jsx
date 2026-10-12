@@ -1,5 +1,6 @@
 import React from 'react';
 import { Sparkles, Gem, Compass, Shield, HeartHandshake } from 'lucide-react';
+import { SafeImage } from './SafeImage';
 
 export const AboutBrand = () => {
   return (
@@ -15,7 +16,7 @@ export const AboutBrand = () => {
           {/* Left Column: Editorial Imagery Gallery */}
           <div className="lg:col-span-5 space-y-4">
             <div className="relative rounded-2xl overflow-hidden shadow-luxury border-2 border-white">
-              <img
+              <SafeImage
                 src="https://images.unsplash.com/photo-1598560917505-59a3ad559071?auto=format&fit=crop&w=800&q=80"
                 alt="Jeweller inspecting natural gemstones in atelier"
                 className="w-full h-80 sm:h-96 object-cover"
@@ -35,7 +36,7 @@ export const AboutBrand = () => {
             {/* Split sub-images */}
             <div className="grid grid-cols-2 gap-3">
               <div className="rounded-xl overflow-hidden border border-gold-200/70 shadow-xs h-28 sm:h-36">
-                <img
+                <SafeImage
                   src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=400&q=80"
                   alt="Raw crystal cluster texture"
                   className="w-full h-full object-cover"
@@ -43,7 +44,7 @@ export const AboutBrand = () => {
                 />
               </div>
               <div className="rounded-xl overflow-hidden border border-gold-200/70 shadow-xs h-28 sm:h-36">
-                <img
+                <SafeImage
                   src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=400&q=80"
                   alt="Gold vermeil setting detail"
                   className="w-full h-full object-cover"
